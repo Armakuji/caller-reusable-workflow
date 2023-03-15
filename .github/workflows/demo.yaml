@@ -1,0 +1,8 @@
+name: Caller Reusable Workflow
+
+on: [push]
+jobs:
+  call-workflow-passing-data:
+    uses: Armakuji/reusable-workflow/.github/workflows/reusable-workflow.yml@main
+    secrets:
+      CALLER_TOKEN: ${{ secrets.CALLER_TOKEN }}
