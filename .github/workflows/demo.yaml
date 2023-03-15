@@ -7,6 +7,6 @@ jobs:
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
   call-workflow-passing-data:
-    uses: Armakuji/reusable-workflow/.github/workflows/reusable-workflow.yml@main
+    uses: Armakuji/reusable-workflow/.github/workflows/reusable-workflow.yaml@main
     secrets:
       CALLER_TOKEN: ${{ secrets.CALLER_TOKEN }}
