@@ -2,6 +2,10 @@ name: Caller Reusable Workflow
 
 on: [push]
 jobs:
+  echo-start:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
   call-workflow-passing-data:
     uses: Armakuji/reusable-workflow/.github/workflows/reusable-workflow.yml@main
     secrets:
